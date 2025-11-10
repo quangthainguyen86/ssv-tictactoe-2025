@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông Tin Giải Đấu - SSV Tic-Tac-Toe Championship 2025</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #6b7280;
+            --secondary-color: #3b82f6;
+            --accent-color: #facc15;
+            --icon-color: #3b82f6;
+            --text-color: #111827;
+            --bg-color: #f3f4f6;
+            --card-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            --card-hover-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding-top: 80px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            height: 80px;
+        }
+
+        .navbar .nav-link {
+            color: #fff;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            padding: 8px 16px;
+            transition: color 0.2s ease, background 0.2s ease;
+        }
+
+        .navbar .nav-link:hover {
+            color: #fef08a;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar .nav-link.active {
+            color: #fef08a;
+            border-bottom: 2px solid #fef08a;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            letter-spacing: 1.2px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.6rem;
+            letter-spacing: 0.8px;
+        }
+
+        .info-section {
+            background: #fff;
+            box-shadow: var(--card-shadow);
+            padding: 20px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .info-section:hover {
+            box-shadow: var(--card-hover-shadow);
+            transform: translateY(-3px);
+        }
+
+        .info-section h3 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-top: 20px;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            letter-spacing: 0.5px;
+        }
+
+        .info-section p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .info-section ul {
+            padding-left: 20px;
+        }
+
+        .info-section ul li {
+            margin-bottom: 8px;
+        }
+
+        .info-section .tournament-image {
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+            border: 2px solid #e5e7eb;
+            border-radius: 5px;
+        }
+
+        .troll-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: var(--icon-color);
+            background: #fff;
+            border: 2px solid var(--icon-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .troll-icon:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 60px;
+            }
+            .navbar {
+                height: 60px;
+            }
+            .navbar-brand {
+                font-size: 1.1rem;
+            }
+            .navbar .nav-link {
+                font-size: 0.85rem;
+                padding: 6px 12px;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            h2 {
+                font-size: 1.4rem;
+            }
+            .info-section {
+                padding: 15px;
+            }
+            .troll-icon {
+                font-size: 1.5rem;
+                width: 40px;
+                height: 40px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sticky Header -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="matches.html">SSV Tic-Tac-Toe Championship 2025</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="info.html">Thông tin giải đấu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="matches.html">Lịch thi đấu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rankings.html">Bảng xếp hạng</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Info Content -->
+    <div class="container">
+        <h1>Thông Tin Giải Đấu</h1>
+
+        <div class="info-section">
+            <h2>TicTacToe Championship 2025</h2>
+            <!-- Tournament Image -->
+            <img src="image.png" alt="Hình ảnh Giải Đấu TicTacToe Championship 2025" class="tournament-image">
+
+            <h3>I. PHƯƠNG CHÂM</h3>
+            <p>“Tinh thần chiến thắng – Kỷ luật và chiến thuật dẫn lối.”</p>
+
+            <h3>II. MỤC ĐÍCH</h3>
+            <ul>
+                <li>Xác định nhà vô địch TicTacToe xuất sắc nhất thông qua các trận đấu đòi hỏi chiến thuật và tư duy chiến lược cao.</li>
+                <li>Tạo môi trường thi đấu chuyên nghiệp, nơi mọi thành viên có cơ hội thể hiện kỹ năng và phát triển tiềm năng cá nhân.</li>
+                <li>Khuyến khích sự tập trung và quyết đoán trong từng nước đi, nâng cao khả năng tư duy logic.</li>
+                <li>Thúc đẩy tinh thần cạnh tranh lành mạnh và đoàn kết trong nội bộ công ty qua các vòng đấu nhóm.</li>
+                <li>Định vị TicTacToe như một sân chơi trí tuệ, tôn vinh sự kết hợp giữa kỹ thuật, tâm lý và phản xạ đỉnh cao.</li>
+            </ul>
+
+            <h3>III. THỜI GIAN VÀ ĐỊA ĐIỂM</h3>
+            <ol>
+                <li><strong>Thời gian:</strong>
+                    <ul>
+                        <li>Giải đấu diễn ra từ khung giờ 12h15, 17h45 các ngày trong tuần từ thứ 2 đến thứ 6.</li>
+                        <li>Các trường hợp có việc bận thì phải báo trước ban tổ chức để chuyển lịch thi đấu; nếu không báo trước, người vắng mặt sẽ bị xử lý theo quy định.</li>
+                        <li>Các trường hợp cần chuyển lịch thi đấu từ buổi chiều thành buổi trưa thì chỉ cần đối thủ đồng ý, ban tổ chức sẽ sắp xếp thi đấu.</li>
+                    </ul>
+                </li>
+                <li><strong>Địa điểm:</strong>
+                    <p>Tại công ty Saishunkan System Việt Nam (chi nhánh Huế).</p>
+                </li>
+            </ol>
+
+            <h3>IV. ĐỐI TƯỢNG THAM GIA VÀ THỂ THỨC THI ĐẤU</h3>
+            <ol>
+                <li><strong>Đối tượng tham gia:</strong>
+                    <p>Toàn bộ 20 thành viên thuộc công ty Saishunkan System Việt Nam chi nhánh Huế (đã đăng ký thi đấu với ban tổ chức).</p>
+                </li>
+                <li><strong>Thể thức thi đấu:</strong>
+                    <ol>
+                        <li><strong>Vòng bảng (Round Robin):</strong>
+                            <ul>
+                                <li>20 người chơi được chia thành 4 bảng (A, B, C, D), mỗi bảng 5 người.</li>
+                                <li>Mỗi bảng thi đấu vòng tròn với thể thức lượt đi và lượt về (mỗi người chơi đấu với mọi người trong bảng 2 lần).</li>
+                                <li><strong>Thời gian:</strong>
+                                    <p>Mỗi hiệp đấu 5 phút.</p>
+                                </li>
+                                <li>Trận đấu gồm 3 ván thắng 2 (Bo3).</li>
+                                <li><strong>Tính điểm bảng:</strong>
+                                    <ul>
+                                        <li>Thắng: +3 điểm</li>
+                                        <li>Hòa: +1 điểm</li>
+                                        <li>Thua: 0 điểm</li>
+                                    </ul>
+                                </li>
+                                <li>2 người có điểm số cao nhất mỗi bảng (tổng cộng 8 người) sẽ vào vòng tứ kết.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Vòng knock-out (Tứ kết, Bán kết, Chung kết):</strong>
+                            <ul>
+                                <li>8 người từ vòng bảng đấu loại trực tiếp theo thể thức solo.</li>
+                                <li><strong>Thời gian:</strong>
+                                    <p>Mỗi hiệp đấu 5 phút.</p>
+                                </li>
+                                <li>Trận đấu gồm 3 ván thắng 2 (Bo3).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Luật chơi Tic Tac Toe 15x15:</strong>
+                            <ul>
+                                <li>Trò chơi diễn ra trên bàn cờ 15x15.</li>
+                                <li>Hai người chơi (A và B) đối đầu trực tiếp, người chơi A dùng “X”, người chơi B dùng “O”.</li>
+                                <li>Mỗi bên lần lượt đánh 1 nước / lượt.</li>
+                                <li>Ai tạo được 5 ký hiệu liên tiếp (ngang, dọc, chéo) là thắng ván đấu.</li>
+                                <li>Chặn sát 2 đầu không thể Win (vd: XOOOOOX).</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </li>
+            </ol>
+
+            <h3>V. GIẢI THƯỞNG - QUY ĐỊNH</h3>
+            <ol>
+                <li><strong>Giải thưởng:</strong>
+                    <ul>
+                        <li>Giải nhất: Huy chương + tiền</li>
+                        <li>Giải nhì: Huy chương + tiền</li>
+                        <li>Giải ba: Huy chương + tiền</li>
+                        <li>Giải tư:</li>
+                        <li>Hiệp đấu kết thúc nhanh nhất (Chỉ áp dụng cho thể thức solo, kết thúc giải ai giữ kỷ lục nhanh nhất là giành giải):</li>
+                        <li>MVP: Không 1 trận thua (Trong trận thắng mà có round thua thì vẫn được tính cho giải thưởng này)</li>
+                        <li>FVP: Không 1 trận thắng (Trong trận thua mà có round thắng thì vẫn được tính cho giải thưởng này)</li>
+                    </ul>
+                </li>
+                <li><strong>Quy định & Xử phạt:</strong>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Hành vi</th>
+                                <th>Hình phạt</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Đến trễ < 5 phút không báo</td>
+                                <td>Cảnh cáo</td>
+                            </tr>
+                            <tr>
+                                <td>Đến trễ > 10 phút không báo</td>
+                                <td>Thua hiệp đầu tiên</td>
+                            </tr>
+                            <tr>
+                                <td>Đến trễ > 10 phút không báo</td>
+                                <td>Thua trận đấu đó</td>
+                            </tr>
+                            <tr>
+                                <td>Sai lượt liên tiếp > 1 lần</td>
+                                <td>Sẽ không được dùng chức năng undo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><strong style="color: red;">Lưu ý: Quyết định của trọng tài là cuối cùng và có hiệu lực bắt buộc. Mọi hành vi tranh cãi hoặc không tuân thủ sẽ bị xử thua.</strong></p>
+                </li>
+            </ol>
+
+            <p><strong>Chúc mọi người chơi vui vẻ ^^</strong></p>
+        </div>
+    </div>
+
+    <!-- Troll Icon -->
+    <div class="troll-icon" id="trollIcon">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Shared JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

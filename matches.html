@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lịch Thi Đấu - SSV Tic-Tac-Toe Championship 2025</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Poppins:wght@600;700&display=swap"
+        rel="stylesheet">
+    <!-- DataTables CSS -->
+    <link href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #6b7280;
+            --secondary-color: #3b82f6;
+            --accent-color: #facc15;
+            --icon-color: #3b82f6;
+            --text-color: #111827;
+            --bg-color: #f3f4f6;
+            --card-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            --card-hover-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding-top: 80px;
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            height: 80px;
+        }
+
+        .navbar .nav-link {
+            color: #fff;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            padding: 8px 16px;
+            transition: color 0.2s ease, background 0.2s ease;
+        }
+
+        .navbar .nav-link:hover {
+            color: #fef08a;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .navbar .nav-link.active {
+            color: #fef08a;
+            border-bottom: 2px solid #fef08a;
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 30px auto;
+            padding: 0 15px;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            font-size: 2.5rem;
+            letter-spacing: 1.2px;
+            animation: fadeIn 0.5s ease;
+        }
+
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 20px;
+            text-align: center;
+            font-size: 1.6rem;
+            letter-spacing: 0.8px;
+        }
+
+        .table-container {
+            background: #fff;
+            box-shadow: var(--card-shadow);
+            padding: 20px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .table-container:hover {
+            box-shadow: var(--card-hover-shadow);
+            transform: translateY(-3px);
+        }
+
+        .table thead th {
+            background: var(--primary-color);
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            padding: 12px;
+            border: none;
+        }
+
+        .table tbody tr {
+            transition: background-color 0.3s ease;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        .table tbody td {
+            text-align: center;
+            vertical-align: middle;
+            font-size: 0.9rem;
+            padding: 10px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .rest-row {
+            background: #fef3c7 !important;
+            color: #713f12;
+            font-weight: 500;
+        }
+
+        .final-row {
+            background: #16a34a !important;
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .final-match-row {
+            background: #f59e0b !important;
+            color: #111827;
+            font-weight: 600;
+            border: 2px solid transparent;
+            position: relative;
+            box-shadow: 0 0 10px rgba(245, 158, 11, 0.5);
+            animation: rgbBorder 3s linear infinite;
+        }
+
+        .final-match-row:hover {
+            background: #fbbf24 !important;
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.7);
+        }
+
+        @keyframes rgbBorder {
+            0% {
+                border-color: #ff0000;
+                /* Red */
+                box-shadow: 0 0 10px #ff0000;
+            }
+
+            33% {
+                border-color: #00ff00;
+                /* Green */
+                box-shadow: 0 0 10px #00ff00;
+            }
+
+            66% {
+                border-color: #0000ff;
+                /* Blue */
+                box-shadow: 0 0 10px #0000ff;
+            }
+
+            100% {
+                border-color: #ff0000;
+                /* Back to Red */
+                box-shadow: 0 0 10px #ff0000;
+            }
+        }
+
+        .group-section {
+            margin-bottom: 40px;
+        }
+
+        .group-card {
+            background: #fff;
+            padding: 12px;
+            box-shadow: var(--card-shadow);
+            transition: all 0.3s ease;
+            border: 2px solid var(--primary-color);
+        }
+
+        .group-card:hover {
+            box-shadow: var(--card-hover-shadow);
+            transform: translateY(-3px);
+            border-color: var(--text-color);
+        }
+
+        .group-card h4 {
+            color: #fff;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            background: var(--primary-color);
+            padding: 8px;
+            text-align: center;
+        }
+
+        .list-group-item {
+            border: none;
+            padding: 6px 0;
+            font-size: 0.9rem;
+            color: var(--text-color);
+            transition: color 0.2s ease;
+        }
+
+        .list-group-item:hover {
+            color: var(--secondary-color);
+            background: #f1f5f9;
+        }
+
+        .filter-section {
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .filter-section select {
+            padding: 10px;
+            border: 1px solid #d1d5db;
+            background: #fff;
+            font-size: 0.95rem;
+            width: 200px;
+            transition: border-color 0.3s ease;
+        }
+
+        .filter-section select:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 6px rgba(59, 130, 246, 0.3);
+        }
+
+        .troll-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 2rem;
+            color: var(--icon-color);
+            background: #fff;
+            border: 2px solid var(--icon-color);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .troll-icon:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.03);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding-top: 60px;
+            }
+
+            .navbar {
+                height: 60px;
+            }
+
+            .navbar-brand {
+                font-size: 1.1rem;
+            }
+
+            .navbar .nav-link {
+                font-size: 0.85rem;
+                padding: 6px 12px;
+            }
+
+            .filter-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .filter-section select {
+                width: 100%;
+                max-width: 280px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            .table-container {
+                padding: 15px;
+            }
+
+            .group-card {
+                margin-bottom: 15px;
+            }
+
+            .troll-icon {
+                font-size: 1.5rem;
+                width: 40px;
+                height: 40px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+
+        /* === PLAYOFF BRACKET === */
+        .playoff-bracket {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            padding: 30px 0;
+            overflow-x: auto;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom, #f8fafc, #e2e8f0);
+            border-top: 1px solid #cbd5e1;
+            border-bottom: 1px solid #cbd5e1;
+            margin: 20px 0;
+        }
+
+        .bracket-column {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+            min-width: 200px;
+        }
+
+        .bracket-column h3 {
+            text-align: center;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 16px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            position: relative;
+        }
+
+        .bracket-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 3px;
+            background: #3b82f6;
+            border-radius: 2px;
+        }
+
+        .match-pair {
+            background: #ffffff;
+            border: 1.5px solid #e2e8f0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            width: 200px;
+            overflow: hidden;
+        }
+
+        .match-pair:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+            border-color: #3b82f6;
+        }
+
+        .match {
+            padding: 10px 12px;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #f1f5f9;
+            transition: background 0.2s ease;
+        }
+
+        .match:last-child {
+            border-bottom: none;
+        }
+
+        .match .player {
+            font-weight: 600;
+            color: #1e293b;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 110px;
+        }
+
+        .match .winner {
+            color: #16a34a;
+            font-weight: 700;
+            text-shadow: 0 0 3px rgba(22, 163, 74, 0.3);
+        }
+
+        .match .vs {
+            font-size: 0.7rem;
+            color: #64748b;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .info-row {
+            padding: 8px 12px;
+            background: #6B7280;
+            font-size: 0.8rem;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-row .score {
+            font-weight: 600;
+            color: #696e77;
+        }
+
+        .match-pair.final-match {
+            border: 2px solid #f59e0b;
+            background: linear-gradient(135deg, #fffbeb 0%, #fefce8 100%);
+            box-shadow: 0 8px 20px rgba(245, 158, 11, 0.2);
+            animation: gentlePulse 3s ease-in-out infinite;
+        }
+
+        .match-pair.final-match:hover {
+            box-shadow: 0 16px 32px rgba(245, 158, 11, 0.3);
+            border-color: #d97706;
+        }
+
+        .match-pair.final-match .info-row {
+            color: #c2410c;
+            background: #fef3c7;
+            font-weight: 600;
+        }
+
+        @keyframes gentlePulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.02);
+            }
+        }
+
+        .bracket-connector {
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+            position: relative;
+            width: 70px;
+            justify-content: center;
+        }
+
+        .line {
+            height: 2px;
+            background: #94a3b8;
+            position: relative;
+            transition: background 0.3s ease;
+        }
+
+        .line.top-line {
+            width: 35px;
+            margin-left: 0;
+        }
+
+        .line.bottom-line {
+            width: 35px;
+            margin-left: auto;
+        }
+
+        .line.full-line {
+            width: 100%;
+        }
+
+        .bracket-connector.quarter-to-semi::before,
+        .bracket-connector.quarter-to-semi::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: #94a3b8;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: background 0.3s ease;
+        }
+
+        .bracket-connector.quarter-to-semi::before {
+            top: 0;
+            height: 80px;
+        }
+
+        .bracket-connector.quarter-to-semi::after {
+            bottom: 0;
+            height: 80px;
+        }
+
+        .bracket-connector.semi-to-final::before {
+            content: '';
+            position: absolute;
+            width: 2px;
+            background: #94a3b8;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            height: 80px;
+            transition: background 0.3s ease;
+        }
+
+        .bracket-connector.semi-to-final::after {
+            display: none;
+        }
+
+        .match-pair:hover~.bracket-connector .line,
+        .bracket-connector:hover .line,
+        .match-pair:hover~.bracket-connector::before,
+        .match-pair:hover~.bracket-connector::after,
+        .bracket-connector:hover::before,
+        .bracket-connector:hover::after {
+            background: #3b82f6;
+        }
+
+        /* === RESPONSIVE === */
+        @media (max-width: 992px) {
+            .playoff-bracket {
+                flex-direction: column;
+                gap: 50px;
+                padding: 40px 0;
+            }
+
+            .bracket-connector {
+                transform: rotate(90deg);
+                width: 100px;
+                height: 70px;
+            }
+
+            .bracket-connector::before,
+            .bracket-connector::after {
+                display: none;
+            }
+
+            .line {
+                width: 50% !important;
+            }
+
+            .bracket-column {
+                gap: 40px;
+            }
+
+            .match-pair {
+                width: 180px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .match-pair {
+                width: 160px;
+            }
+
+            .match .player {
+                max-width: 90px;
+                font-size: 0.85rem;
+            }
+
+            .info-row {
+                font-size: 0.75rem;
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sticky Header -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="matches.html">SSV Tic-Tac-Toe Championship 2025</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="info.html">Thông tin giải đấu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="matches.html">Lịch thi đấu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="rankings.html">Bảng xếp hạng</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Match Schedule Content -->
+    <div class="container">
+        <h1>Lịch Thi Đấu</h1>
+
+        <!-- Group Section -->
+        <div class="group-section">
+            <h2>Nhóm</h2>
+            <div class="row" id="group-list"></div>
+        </div>
+
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <select id="date-filter">
+                <option value="all">Tất cả ngày</option>
+            </select>
+            <select id="group-filter">
+                <option value="all">Tất cả nhóm</option>
+                <option value="A">Nhóm A</option>
+                <option value="B">Nhóm B</option>
+                <option value="C">Nhóm C</option>
+                <option value="D">Nhóm D</option>
+            </select>
+        </div>
+
+        <!-- Round Robin Table -->
+        <div class="table-container">
+            <h2>Lịch Vòng Bảng</h2>
+            <table class="table table-bordered table-hover" id="round-robin-table">
+                <thead>
+                    <tr>
+                        <th><i class="fas fa-calendar"></i> Ngày Thi Đấu</th>
+                        <th><i class="fas fa-clock"></i> Giờ Thi Đấu</th>
+                        <th><i class="fas fa-user"></i> Người Chơi 1</th>
+                        <th><i class="fas fa-user"></i> Người Chơi 2</th>
+                        <th><i class="fas fa-trophy"></i> Người Thắng</th>
+                        <th><i class="fas fa-star"></i> Tỷ số</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Playoff Bracket -->
+        <div class="table-container">
+            <h2>Lịch Playoff</h2>
+            <div id="playoff-bracket" class="playoff-bracket">
+                <div class="bracket-column quarterfinals">
+                    <h3>Tứ kết</h3>
+                    <div class="match-pair" data-match-index="0"></div>
+                    <div class="match-pair" data-match-index="1"></div>
+                    <div class="match-pair" data-match-index="2"></div>
+                    <div class="match-pair" data-match-index="3"></div>
+                </div>
+
+                <div class="bracket-connector quarter-to-semi">
+                    <div class="line top-line"></div>
+                    <div class="line bottom-line"></div>
+                    <div class="line top-line"></div>
+                    <div class="line bottom-line"></div>
+                </div>
+
+                <div class="bracket-column semifinals">
+                    <h3>Bán kết</h3>
+                    <div class="match-pair" data-match-index="4"></div>
+                    <div class="match-pair" data-match-index="5"></div>
+                </div>
+
+                <div class="bracket-connector semi-to-final">
+                    <div class="line full-line"></div>
+                    <div class="line full-line"></div>
+                </div>
+
+                <div class="bracket-column finals">
+                    <h3>Chung kết</h3>
+                    <div class="match-pair final-match" data-match-index="7"></div>
+                    <h3 class="third-place-title">Tranh hạng 3</h3>
+                    <div class="match-pair third-place-match" data-match-index="6"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gift Icon -->
+    <div class="troll-icon" id="trollIcon">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Moment.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+    <!-- DataTables datetime-moment plugin -->
+    <script src="https://cdn.datatables.net/plug-ins/1.13.7/sorting/datetime-moment.js"></script>
+    <!-- Shared JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>
