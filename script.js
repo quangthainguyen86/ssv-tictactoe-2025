@@ -6,104 +6,6 @@ const groups = {
     D: ['ThaiNQ', 'NhanVP', 'DongLT', 'Mizutani', 'YenNTN']
 };
 
-// const roundRobinMatches = [
-//   // ===== Nhóm A =====
-//   { date: '17/11/2025', time: '12:15', player1: 'ThangNH', player2: 'LieuLD', winner: '', score: '' },
-//   { date: '17/11/2025', time: '12:15', player1: 'ThuyNT', player2: 'NhanTT', winner: '', score: '' },
-//   { date: '18/11/2025', time: '12:15', player1: 'ThangNH', player2: 'ThuyNT', winner: '', score: '' },
-//   { date: '18/11/2025', time: '12:15', player1: 'LieuLD', player2: 'ThangPV', winner: '', score: '' },
-//   { date: '19/11/2025', time: '12:15', player1: 'NhanTT', player2: 'ThangPV', winner: '', score: '' },
-//   { date: '19/11/2025', time: '12:15', player1: 'ThangNH', player2: 'ThangPV', winner: '', score: '' },
-//   { date: '20/11/2025', time: '12:15', player1: 'LieuLD', player2: 'NhanTT', winner: '', score: '' },
-//   { date: '20/11/2025', time: '12:15', player1: 'ThuyNT', player2: 'ThangPV', winner: '', score: '' },
-//   { date: '21/11/2025', time: '12:15', player1: 'ThangNH', player2: 'NhanTT', winner: '', score: '' },
-//   { date: '21/11/2025', time: '12:15', player1: 'LieuLD', player2: 'ThuyNT', winner: '', score: '' },
-
-//   // --- Lượt về ---
-//   { date: '24/11/2025', time: '12:15', player1: 'LieuLD', player2: 'ThangNH', winner: '', score: '' },
-//   { date: '24/11/2025', time: '12:15', player1: 'NhanTT', player2: 'ThuyNT', winner: '', score: '' },
-//   { date: '25/11/2025', time: '12:15', player1: 'ThuyNT', player2: 'ThangNH', winner: '', score: '' },
-//   { date: '25/11/2025', time: '12:15', player1: 'ThangPV', player2: 'LieuLD', winner: '', score: '' },
-//   { date: '26/11/2025', time: '12:15', player1: 'ThangPV', player2: 'NhanTT', winner: '', score: '' },
-//   { date: '26/11/2025', time: '12:15', player1: 'ThangPV', player2: 'ThangNH', winner: '', score: '' },
-//   { date: '27/11/2025', time: '12:15', player1: 'NhanTT', player2: 'LieuLD', winner: '', score: '' },
-//   { date: '27/11/2025', time: '12:15', player1: 'ThangPV', player2: 'ThuyNT', winner: '', score: '' },
-//   { date: '28/11/2025', time: '12:15', player1: 'NhanTT', player2: 'ThangNH', winner: '', score: '' },
-//   { date: '28/11/2025', time: '12:15', player1: 'ThuyNT', player2: 'LieuLD', winner: '', score: '' },
-
-//   // ===== Nhóm B =====
-//   { date: '01/12/2025', time: '12:15', player1: 'HoanPV', player2: 'DuyHG', winner: '', score: '' },
-//   { date: '01/12/2025', time: '12:15', player1: 'SangTT', player2: 'YChiTQ', winner: '', score: '' },
-//   { date: '02/12/2025', time: '12:15', player1: 'HoanPV', player2: 'SangTT', winner: '', score: '' },
-//   { date: '02/12/2025', time: '12:15', player1: 'DuyHG', player2: 'ThanhND', winner: '', score: '' },
-//   { date: '03/12/2025', time: '12:15', player1: 'YChiTQ', player2: 'ThanhND', winner: '', score: '' },
-//   { date: '03/12/2025', time: '12:15', player1: 'HoanPV', player2: 'ThanhND', winner: '', score: '' },
-//   { date: '04/12/2025', time: '12:15', player1: 'DuyHG', player2: 'YChiTQ', winner: '', score: '' },
-//   { date: '04/12/2025', time: '12:15', player1: 'SangTT', player2: 'ThanhND', winner: '', score: '' },
-//   { date: '05/12/2025', time: '12:15', player1: 'HoanPV', player2: 'YChiTQ', winner: '', score: '' },
-//   { date: '05/12/2025', time: '12:15', player1: 'DuyHG', player2: 'SangTT', winner: '', score: '' },
-
-//   // --- Lượt về ---
-//   { date: '08/12/2025', time: '12:15', player1: 'DuyHG', player2: 'HoanPV', winner: '', score: '' },
-//   { date: '08/12/2025', time: '12:15', player1: 'YChiTQ', player2: 'SangTT', winner: '', score: '' },
-//   { date: '09/12/2025', time: '12:15', player1: 'SangTT', player2: 'HoanPV', winner: '', score: '' },
-//   { date: '09/12/2025', time: '12:15', player1: 'ThanhND', player2: 'DuyHG', winner: '', score: '' },
-//   { date: '10/12/2025', time: '12:15', player1: 'ThanhND', player2: 'YChiTQ', winner: '', score: '' },
-//   { date: '10/12/2025', time: '12:15', player1: 'ThanhND', player2: 'HoanPV', winner: '', score: '' },
-//   { date: '11/12/2025', time: '12:15', player1: 'YChiTQ', player2: 'DuyHG', winner: '', score: '' },
-//   { date: '11/12/2025', time: '12:15', player1: 'ThanhND', player2: 'SangTT', winner: '', score: '' },
-//   { date: '12/12/2025', time: '12:15', player1: 'YChiTQ', player2: 'HoanPV', winner: '', score: '' },
-//   { date: '12/12/2025', time: '12:15', player1: 'SangTT', player2: 'DuyHG', winner: '', score: '' },
-
-//   // ===== Nhóm C =====
-//   { date: '15/12/2025', time: '12:15', player1: 'KhanhLQ', player2: 'HuyHVQ', winner: '', score: '' },
-//   { date: '15/12/2025', time: '12:15', player1: 'SinhNT', player2: 'HungLV', winner: '', score: '' },
-//   { date: '16/12/2025', time: '12:15', player1: 'KhanhLQ', player2: 'SinhNT', winner: '', score: '' },
-//   { date: '16/12/2025', time: '12:15', player1: 'HuyHVQ', player2: 'QuynhTTN', winner: '', score: '' },
-//   { date: '17/12/2025', time: '12:15', player1: 'HungLV', player2: 'QuynhTTN', winner: '', score: '' },
-//   { date: '17/12/2025', time: '12:15', player1: 'KhanhLQ', player2: 'QuynhTTN', winner: '', score: '' },
-//   { date: '18/12/2025', time: '12:15', player1: 'HuyHVQ', player2: 'HungLV', winner: '', score: '' },
-//   { date: '18/12/2025', time: '12:15', player1: 'SinhNT', player2: 'QuynhTTN', winner: '', score: '' },
-//   { date: '19/12/2025', time: '12:15', player1: 'KhanhLQ', player2: 'HungLV', winner: '', score: '' },
-//   { date: '19/12/2025', time: '12:15', player1: 'HuyHVQ', player2: 'SinhNT', winner: '', score: '' },
-
-//   // --- Lượt về ---
-//   { date: '22/12/2025', time: '12:15', player1: 'HuyHVQ', player2: 'KhanhLQ', winner: '', score: '' },
-//   { date: '22/12/2025', time: '12:15', player1: 'HungLV', player2: 'SinhNT', winner: '', score: '' },
-//   { date: '23/12/2025', time: '12:15', player1: 'SinhNT', player2: 'KhanhLQ', winner: '', score: '' },
-//   { date: '23/12/2025', time: '12:15', player1: 'QuynhTTN', player2: 'HuyHVQ', winner: '', score: '' },
-//   { date: '24/12/2025', time: '12:15', player1: 'QuynhTTN', player2: 'HungLV', winner: '', score: '' },
-//   { date: '24/12/2025', time: '12:15', player1: 'QuynhTTN', player2: 'KhanhLQ', winner: '', score: '' },
-//   { date: '25/12/2025', time: '12:15', player1: 'HungLV', player2: 'HuyHVQ', winner: '', score: '' },
-//   { date: '25/12/2025', time: '12:15', player1: 'QuynhTTN', player2: 'SinhNT', winner: '', score: '' },
-//   { date: '26/12/2025', time: '12:15', player1: 'HungLV', player2: 'KhanhLQ', winner: '', score: '' },
-//   { date: '26/12/2025', time: '12:15', player1: 'SinhNT', player2: 'HuyHVQ', winner: '', score: '' },
-
-//   // ===== Nhóm D =====
-//   { date: '29/12/2025', time: '12:15', player1: 'ThaiNQ', player2: 'NhanVP', winner: '', score: '' },
-//   { date: '29/12/2025', time: '12:15', player1: 'DongLT', player2: 'Mizutani', winner: '', score: '' },
-//   { date: '30/12/2025', time: '12:15', player1: 'ThaiNQ', player2: 'DongLT', winner: '', score: '' },
-//   { date: '30/12/2025', time: '12:15', player1: 'NhanVP', player2: 'YenNTN', winner: '', score: '' },
-//   { date: '31/12/2025', time: '12:15', player1: 'Mizutani', player2: 'YenNTN', winner: '', score: '' },
-//   { date: '31/12/2025', time: '12:15', player1: 'ThaiNQ', player2: 'YenNTN', winner: '', score: '' },
-//   { date: '02/01/2026', time: '12:15', player1: 'NhanVP', player2: 'Mizutani', winner: '', score: '' },
-//   { date: '02/01/2026', time: '12:15', player1: 'DongLT', player2: 'YenNTN', winner: '', score: '' },
-//   { date: '05/01/2026', time: '12:15', player1: 'ThaiNQ', player2: 'Mizutani', winner: '', score: '' },
-//   { date: '05/01/2026', time: '12:15', player1: 'NhanVP', player2: 'DongLT', winner: '', score: '' },
-
-//   // --- Lượt về ---
-//   { date: '06/01/2026', time: '12:15', player1: 'NhanVP', player2: 'ThaiNQ', winner: '', score: '' },
-//   { date: '06/01/2026', time: '12:15', player1: 'Mizutani', player2: 'DongLT', winner: '', score: '' },
-//   { date: '07/01/2026', time: '12:15', player1: 'DongLT', player2: 'ThaiNQ', winner: '', score: '' },
-//   { date: '07/01/2026', time: '12:15', player1: 'YenNTN', player2: 'NhanVP', winner: '', score: '' },
-//   { date: '08/01/2026', time: '12:15', player1: 'YenNTN', player2: 'Mizutani', winner: '', score: '' },
-//   { date: '08/01/2026', time: '12:15', player1: 'YenNTN', player2: 'ThaiNQ', winner: '', score: '' },
-//   { date: '09/01/2026', time: '12:15', player1: 'Mizutani', player2: 'NhanVP', winner: '', score: '' },
-//   { date: '09/01/2026', time: '12:15', player1: 'YenNTN', player2: 'DongLT', winner: '', score: '' },
-//   { date: '12/01/2026', time: '12:15', player1: 'Mizutani', player2: 'ThaiNQ', winner: '', score: '' },
-//   { date: '12/01/2026', time: '12:15', player1: 'DongLT', player2: 'NhanVP', winner: '', score: '' }
-// ];
-
 const roundRobinMatches = [
   // ===== Nhóm A =====
   { date: '17/11/2025', time: '12:15', player1: 'ThangNH', player2: 'LieuLD', winner: '', score: '' },
@@ -193,21 +95,117 @@ function renderGroups() {
     }
 }
 
-function setupTrollIcon() {
-    const trollIcon = document.getElementById('trollIcon');
-    if (trollIcon) {
-        trollIcon.addEventListener('mouseenter', () => {
-            const viewportWidth = window.innerWidth - 60;
-            const viewportHeight = window.innerHeight - 60;
-            const randomX = Math.random() * viewportWidth;
-            const randomY = Math.random() * viewportHeight;
-            trollIcon.style.left = `${randomX}px`;
-            trollIcon.style.top = `${randomY}px`;
-            trollIcon.style.bottom = 'auto';
-            trollIcon.style.right = 'auto';
-        });
+// === Gamepad Icon: CHẠY 5 LẦN → DỪNG → CLICK MỞ LINK → RESET HOÀN TOÀN ===
+let runCount = 0;
+const maxRuns = 5;
+let isCaught = false;
+let originalStyle = null;
+
+function initgamepadIcon() {
+    const icon = document.getElementById('gamepadIcon');
+    if (!icon) return;
+
+    // Lưu style gốc (chỉ lần đầu)
+    if (!originalStyle) {
+        originalStyle = {
+            left: icon.style.left,
+            top: icon.style.top,
+            right: icon.style.right || '20px',
+            bottom: icon.style.bottom || '20px',
+            transform: icon.style.transform || 'scale(1)',
+            boxShadow: icon.style.boxShadow || '',
+            animation: icon.style.animation || '',
+            background: icon.style.background || '#fff',
+            color: icon.style.color || '#3b82f6',
+            border: icon.style.border || '2px solid #3b82f6'
+        };
     }
+
+    // Reset về trạng thái ban đầu
+    function resetIcon() {
+        runCount = 0;
+        isCaught = false;
+        icon.style.transition = 'all 0.4s ease';
+        icon.style.left = originalStyle.left;
+        icon.style.top = originalStyle.top;
+        icon.style.right = originalStyle.right;
+        icon.style.bottom = originalStyle.bottom;
+        icon.style.transform = originalStyle.transform;
+        icon.style.boxShadow = originalStyle.boxShadow;
+        icon.style.animation = originalStyle.animation;
+        icon.style.background = originalStyle.background;
+        icon.style.color = originalStyle.color;
+        icon.style.border = originalStyle.border;
+    }
+
+    function runAway() {
+        if (isCaught || runCount >= maxRuns) return;
+
+        runCount++;
+        console.log(`Chạy lần ${runCount}/5`);
+
+        const maxX = window.innerWidth - 60;
+        const maxY = window.innerHeight - 60;
+        const newX = 20 + Math.random() * (maxX - 40);
+        const newY = 20 + Math.random() * (maxY - 40);
+
+        icon.style.left = `${newX}px`;
+        icon.style.top = `${newY}px`;
+        icon.style.bottom = 'auto';
+        icon.style.right = 'auto';
+
+        // LẦN 5: DỪNG TẠI CHỖ
+        if (runCount >= maxRuns) {
+            setTimeout(() => {
+                isCaught = true;
+                icon.style.transform = 'scale(1.4)';
+                icon.style.boxShadow = '0 0 0 6px rgba(59, 130, 246, 0.4), 0 8px 25px rgba(0,0,0,0.2)';
+                icon.style.animation = 'pulse 1.5s infinite';
+
+                const style = document.createElement('style');
+                style.id = 'troll-pulse-style';
+                style.textContent = `
+                    @keyframes pulse {
+                        0%, 100% { box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.4), 0 8px 25px rgba(0,0,0,0.2); }
+                        50% { box-shadow: 0 0 0 12px rgba(59, 130, 246, 0.2), 0 10px 30px rgba(0,0,0,0.25); }
+                    }
+                `;
+                document.head.appendChild(style);
+            }, 400);
+        }
+    }
+
+    // Hover → chạy trốn
+    icon.addEventListener('mouseenter', runAway);
+
+    // Click → mở link + reset sau 1 giây
+    icon.addEventListener('click', () => {
+        if (isCaught) {
+            window.open('https://thichthivar.ssvhue.work', '_blank');
+
+            // Reset sau khi mở link
+            setTimeout(() => {
+                // Xóa animation pulse
+                const pulseStyle = document.getElementById('troll-pulse-style');
+                if (pulseStyle) pulseStyle.remove();
+
+                resetIcon();
+            }, 1000);
+        } else {
+            // Chưa bắt được → xoay nhẹ
+            icon.style.transform = 'rotate(20deg) scale(0.9)';
+            setTimeout(() => icon.style.transform = '', 300);
+        }
+    });
+
+    // CSS cơ bản
+    icon.style.position = 'fixed';
+    icon.style.zIndex = '9999';
+    icon.style.cursor = 'pointer';
+    icon.style.transition = 'all 0.35s ease';
 }
+
+document.addEventListener('DOMContentLoaded', initgamepadIcon);
 
 // Schedule page functions
 function populateDateFilter() {
@@ -663,5 +661,5 @@ $(document).ready(() => {
     }
 
     // Common initialization
-    setupTrollIcon();
+    setupgamepadIcon();
 });
