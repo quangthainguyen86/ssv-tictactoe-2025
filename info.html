@@ -182,6 +182,7 @@
                 opacity: 0;
                 transform: translateY(10px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -192,25 +193,32 @@
             body {
                 padding-top: 60px;
             }
+
             .navbar {
                 height: 60px;
             }
+
             .navbar-brand {
                 font-size: 1.1rem;
             }
+
             .navbar .nav-link {
                 font-size: 0.85rem;
                 padding: 6px 12px;
             }
+
             h1 {
                 font-size: 2rem;
             }
+
             h2 {
                 font-size: 1.4rem;
             }
+
             .info-section {
                 padding: 15px;
             }
+
             .gamepad-icon {
                 font-size: 1.5rem;
                 width: 40px;
@@ -256,25 +264,27 @@
             <!-- Tournament Image -->
             <img src="image.png" alt="Hình ảnh Giải Đấu TicTacToe Championship 2025" class="tournament-image">
 
-            <h3>I. PHƯƠNG CHÂM</h3>
-            <p>“Chơi để thắng.”</p>
-
-            <h3>II. MỤC ĐÍCH</h3>
+            <h3>I. MỤC ĐÍCH</h3>
             <ul>
-                <li>Xác định nhà vô địch TicTacToe xuất sắc nhất thông qua các trận đấu đòi hỏi chiến thuật và tư duy chiến lược cao.</li>
-                <li>Tạo môi trường thi đấu chuyên nghiệp, nơi mọi thành viên có cơ hội thể hiện kỹ năng và phát triển tiềm năng cá nhân.</li>
+                <li>Xác định nhà vô địch TicTacToe xuất sắc nhất thông qua các trận đấu đòi hỏi chiến thuật và tư duy
+                    chiến lược cao.</li>
+                <li>Tạo môi trường thi đấu chuyên nghiệp, nơi mọi thành viên có cơ hội thể hiện kỹ năng và phát triển
+                    tiềm năng cá nhân.</li>
                 <li>Khuyến khích sự tập trung và quyết đoán trong từng nước đi, nâng cao khả năng tư duy logic.</li>
                 <li>Thúc đẩy tinh thần cạnh tranh lành mạnh và đoàn kết trong nội bộ công ty qua các vòng đấu nhóm.</li>
-                <li>Định vị TicTacToe như một sân chơi trí tuệ, tôn vinh sự kết hợp giữa kỹ thuật, tâm lý và phản xạ đỉnh cao.</li>
+                <li>Định vị TicTacToe như một sân chơi trí tuệ, tôn vinh sự kết hợp giữa kỹ thuật, tâm lý và phản xạ
+                    đỉnh cao.</li>
             </ul>
 
-            <h3>III. THỜI GIAN VÀ ĐỊA ĐIỂM</h3>
+            <h3>II. THỜI GIAN VÀ ĐỊA ĐIỂM</h3>
             <ol>
                 <li><strong>Thời gian:</strong>
                     <ul>
                         <li>Giải đấu diễn ra từ khung giờ 12h15, 17h45 các ngày trong tuần từ thứ 2 đến thứ 6.</li>
-                        <li>Các trường hợp có việc bận thì phải báo trước ban tổ chức để chuyển lịch thi đấu; nếu không báo trước, người vắng mặt sẽ bị xử lý theo quy định.</li>
-                        <li>Các trường hợp cần chuyển lịch thi đấu từ buổi chiều thành buổi trưa thì chỉ cần đối thủ đồng ý, ban tổ chức sẽ sắp xếp thi đấu.</li>
+                        <li>Các trường hợp có việc bận thì phải báo trước ban tổ chức để chuyển lịch thi đấu; nếu không
+                            báo trước, người vắng mặt sẽ bị xử lý theo quy định.</li>
+                        <li>Các trường hợp cần chuyển lịch thi đấu từ buổi chiều thành buổi trưa thì chỉ cần đối thủ
+                            đồng ý, ban tổ chức sẽ sắp xếp thi đấu.</li>
                     </ul>
                 </li>
                 <li><strong>Địa điểm:</strong>
@@ -282,17 +292,30 @@
                 </li>
             </ol>
 
-            <h3>IV. ĐỐI TƯỢNG THAM GIA VÀ THỂ THỨC THI ĐẤU</h3>
+            <h3>III. ĐỐI TƯỢNG THAM GIA VÀ THỂ THỨC THI ĐẤU</h3>
             <ol>
                 <li><strong>Đối tượng tham gia:</strong>
-                    <p>Toàn bộ 20 thành viên thuộc công ty Saishunkan System Việt Nam chi nhánh Huế (đã đăng ký thi đấu với ban tổ chức).</p>
+                    <p>Toàn bộ 20 thành viên thuộc công ty Saishunkan System Việt Nam chi nhánh Huế (đã đăng ký thi đấu
+                        với ban tổ chức).</p>
                 </li>
                 <li><strong>Thể thức thi đấu:</strong>
                     <ol>
+                        <li><strong>Luật chơi Tic Tac Toe 15x15:</strong>
+                            <ul>
+                                <li>Trò chơi diễn ra trên bàn cờ 15x15.</li>
+                                <li>Hai người chơi (A và B) đối đầu trực tiếp, người chơi A dùng “X”, người chơi B dùng
+                                    “O”.</li>
+                                <li>Mỗi bên lần lượt đánh 1 nước / lượt.</li>
+                                <li>Ai tạo được 5 ký hiệu liên tiếp (ngang, dọc, chéo) là thắng ván đấu.</li>
+                                <li>Chặn sát 2 đầu không thể Win (vd: XOOOOOX).</li>
+                                <li>Nếu bàn cờ được đánh đầy mà không có người thắng, ván đấu được tính là hòa.</li>
+                            </ul>
+                        </li>
                         <li><strong>Vòng bảng:</strong>
                             <ul>
                                 <li>20 người chơi được chia thành 4 bảng (A, B, C, D), mỗi bảng 5 người.</li>
-                                <li>Mỗi bảng thi đấu vòng tròn với thể thức lượt đi và lượt về (mỗi người chơi đấu với mọi người trong bảng 2 lần).</li>
+                                <li>Mỗi bảng thi đấu vòng tròn với thể thức lượt đi và lượt về (mỗi người chơi đấu với
+                                    mọi người trong bảng 2 lần).</li>
                                 <li><strong>Thời gian:</strong>
                                     <p>Mỗi hiệp đấu 5 phút.</p>
                                 </li>
@@ -316,29 +339,21 @@
                                 <li>Trận đấu gồm 3 ván thắng 2 (Bo3).</li>
                             </ul>
                         </li>
-                            <li><strong>Luật chơi Tic Tac Toe 15x15:</strong>
-                                <ul>
-                                    <li>Trò chơi diễn ra trên bàn cờ 15x15.</li>
-                                    <li>Hai người chơi (A và B) đối đầu trực tiếp, người chơi A dùng “X”, người chơi B dùng “O”.</li>
-                                    <li>Mỗi bên lần lượt đánh 1 nước / lượt.</li>
-                                    <li>Ai tạo được 5 ký hiệu liên tiếp (ngang, dọc, chéo) là thắng ván đấu.</li>
-                                    <li>Chặn sát 2 đầu không thể Win (vd: XOOOOOX).</li>
-                                    <li>Nếu bàn cờ được đánh đầy mà không có người thắng, ván đấu được tính là hòa.</li>
-                                </ul>
-                            </li>
                     </ol>
                 </li>
             </ol>
 
-            <h3>V. GIẢI THƯỞNG - QUY ĐỊNH</h3>
+            <h3>IV. GIẢI THƯỞNG - QUY ĐỊNH</h3>
             <ol>
                 <li><strong>Giải thưởng:</strong>
                     <ul>
-                        <li>Giải nhất: Cúp vô địch 🏆 +  Huy chương 🥇 + <b>300.000VNĐ</b> 💵</li>
+                        <li>Giải nhất: Cúp vô địch 🏆 + Huy chương 🥇 + <b>250.000VNĐ</b> 💵</li>
                         <li>Giải nhì: Huy chương 🥈 + <b>150.000VNĐ</b> 💵</li>
-                        <li>Giải ba: Huy chương 🥉 + <b>50.000VNĐ</b> 💵</li>
-                        <li>Giải độc cô cầu bại (Không để thua trận nào): <b>100.000VNĐ</b> 💵</li>
-                        <li>Giải an ủi (Không thắng được trận nào): 1 ly cafe 🍵 <b>25.000VNĐ</b></li>
+                        <li>Giải ba: Huy chương 🥉 + <b>100.000VNĐ</b> 💵</li>
+                        <li>Giải "độc cô cầu bại" (Không để thua trận nào, bao gồm các round trong BO3 hoặc B05):
+                            <b>100.000VNĐ</b> 💵</li>
+                        <li>Giải an ủi (Không thể thắng được trận nào, bao gồm các round trong BO3 hoặc B05): 1 ly cafe
+                            🍵 <b>25.000VNĐ</b></li>
                         <li>Giải dự đoán nhà vô địch: <b>100.000VNĐ 💵</b></li>
                     </ul>
                 </li>
@@ -365,7 +380,8 @@
                             </tr>
                         </tbody>
                     </table>
-                    <p><strong style="color: red;">Lưu ý: Quyết định của trọng tài là cuối cùng và có hiệu lực bắt buộc. Mọi hành vi tranh cãi hoặc không tuân thủ sẽ bị xử thua.</strong></p>
+                    <p><strong style="color: red;">Lưu ý: Quyết định của trọng tài là cuối cùng và có hiệu lực bắt buộc.
+                            Mọi hành vi tranh cãi hoặc không tuân thủ sẽ bị xử thua.</strong></p>
                 </li>
             </ol>
 
