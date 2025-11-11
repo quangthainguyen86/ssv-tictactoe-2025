@@ -1,6 +1,6 @@
 // Shared data
 const groups = {
-    A: ['ThangNH', 'LieuLD', 'ThuyNT', 'NhanTT', 'ThangPV'],
+    A: ['ThangNH', 'LieuND', 'ThuyNT', 'NhanTT', 'ThangPV'],
     B: ['HoanPV', 'DuyHG', 'SangTT', 'YChiTQ', 'ThanhND'],
     C: ['KhanhLQ', 'HuyHVQ', 'SinhNT', 'HungLV', 'QuynhTTN'],
     D: ['ThaiNQ', 'NhanVP', 'DongLT', 'Mizutani', 'YenNTN']
@@ -8,7 +8,7 @@ const groups = {
 
 const roundRobinMatches = [
   // Tuần 1
-  { date: '17/11/2025', time: '12:15', player1: 'ThangNH', player2: 'LieuLD', winner: '', score: '' }, // A
+  { date: '17/11/2025', time: '12:15', player1: 'ThangNH', player2: 'LieuND', winner: '', score: '' }, // A
   { date: '17/11/2025', time: '12:15', player1: 'HoanPV', player2: 'DuyHG', winner: '', score: '' },   // B
   { date: '18/11/2025', time: '12:15', player1: 'KhanhLQ', player2: 'HuyHVQ', winner: '', score: '' }, // C
   { date: '18/11/2025', time: '12:15', player1: 'ThaiNQ', player2: 'NhanVP', winner: '', score: '' },  // D
@@ -22,7 +22,7 @@ const roundRobinMatches = [
   // Tuần 2
   { date: '24/11/2025', time: '12:15', player1: 'QuynhTTN', player2: 'KhanhLQ', winner: '', score: '' }, // C
   { date: '24/11/2025', time: '12:15', player1: 'YenNTN', player2: 'ThaiNQ', winner: '', score: '' },    // D
-  { date: '25/11/2025', time: '12:15', player1: 'LieuLD', player2: 'ThuyNT', winner: '', score: '' },    // A
+  { date: '25/11/2025', time: '12:15', player1: 'LieuND', player2: 'ThuyNT', winner: '', score: '' },    // A
   { date: '25/11/2025', time: '12:15', player1: 'DuyHG', player2: 'SangTT', winner: '', score: '' },     // B
   { date: '26/11/2025', time: '12:15', player1: 'HuyHVQ', player2: 'SinhNT', winner: '', score: '' },    // C
   { date: '26/11/2025', time: '12:15', player1: 'NhanVP', player2: 'DongLT', winner: '', score: '' },    // D
@@ -36,7 +36,7 @@ const roundRobinMatches = [
   { date: '01/12/2025', time: '12:15', player1: 'HoanPV', player2: 'SangTT', winner: '', score: '' },   // B
   { date: '02/12/2025', time: '12:15', player1: 'KhanhLQ', player2: 'HungLV', winner: '', score: '' },  // C
   { date: '02/12/2025', time: '12:15', player1: 'ThaiNQ', player2: 'DongLT', winner: '', score: '' },   // D
-  { date: '03/12/2025', time: '12:15', player1: 'LieuLD', player2: 'ThangPV', winner: '', score: '' },  // A
+  { date: '03/12/2025', time: '12:15', player1: 'LieuND', player2: 'ThangPV', winner: '', score: '' },  // A
   { date: '03/12/2025', time: '12:15', player1: 'DuyHG', player2: 'YChiTQ', winner: '', score: '' },    // B
   { date: '04/12/2025', time: '12:15', player1: 'HuyHVQ', player2: 'QuynhTTN', winner: '', score: '' }, // C
   { date: '04/12/2025', time: '12:15', player1: 'NhanVP', player2: 'Mizutani', winner: '', score: '' }, // D
@@ -50,7 +50,7 @@ const roundRobinMatches = [
   { date: '09/12/2025', time: '12:15', player1: 'HoanPV', player2: 'YChiTQ', winner: '', score: '' },    // B
   { date: '10/12/2025', time: '12:15', player1: 'HungLV', player2: 'HuyHVQ', winner: '', score: '' },    // C
   { date: '10/12/2025', time: '12:15', player1: 'ThaiNQ', player2: 'Mizutani', winner: '', score: '' },  // D
-  { date: '11/12/2025', time: '12:15', player1: 'LieuLD', player2: 'NhanTT', winner: '', score: '' },    // A
+  { date: '11/12/2025', time: '12:15', player1: 'LieuND', player2: 'NhanTT', winner: '', score: '' },    // A
   { date: '11/12/2025', time: '12:15', player1: 'DuyHG', player2: 'ThanhND', winner: '', score: '' },    // B
   { date: '12/12/2025', time: '12:15', player1: 'QuynhTTN', player2: 'SinhNT', winner: '', score: '' },  // C
   { date: '12/12/2025', time: '12:15', player1: 'NhanVP', player2: 'YenNTN', winner: '', score: '' }     // D
