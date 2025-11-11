@@ -95,7 +95,7 @@ function renderGroups() {
     }
 }
 
-// === Gamepad Icon: CHẠY 5 LẦN → DỪNG → CLICK MỞ LINK → RESET HOÀN TOÀN ===
+// === Gamepad Icon:===
 let runCount = 0;
 const maxRuns = 5;
 let isCaught = false;
