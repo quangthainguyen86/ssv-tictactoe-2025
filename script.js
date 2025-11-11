@@ -7,53 +7,53 @@ const groups = {
 };
 
 const roundRobinMatches = [
-  // ===== Nhóm A =====
-  { date: '17/11/2025', time: '12:15', player1: 'ThangNH', player2: 'LieuLD', winner: '', score: '' },
-  { date: '17/11/2025', time: '12:15', player1: 'ThuyNT', player2: 'NhanTT', winner: '', score: '' },
-  { date: '18/11/2025', time: '12:15', player1: 'ThangPV', player2: 'ThangNH', winner: '', score: '' },
-  { date: '18/11/2025', time: '12:15', player1: 'LieuLD', player2: 'ThuyNT', winner: '', score: '' },
-  { date: '19/11/2025', time: '12:15', player1: 'NhanTT', player2: 'ThangPV', winner: '', score: '' },
-  { date: '19/11/2025', time: '12:15', player1: 'ThangNH', player2: 'ThuyNT', winner: '', score: '' },
-  { date: '20/11/2025', time: '12:15', player1: 'LieuLD', player2: 'ThangPV', winner: '', score: '' },
-  { date: '20/11/2025', time: '12:15', player1: 'NhanTT', player2: 'ThangNH', winner: '', score: '' },
-  { date: '21/11/2025', time: '12:15', player1: 'ThuyNT', player2: 'ThangPV', winner: '', score: '' },
-  { date: '21/11/2025', time: '12:15', player1: 'LieuLD', player2: 'NhanTT', winner: '', score: '' },
+  // Tuần 1
+  { date: '17/11/2025', time: '12:15', player1: 'ThangNH', player2: 'LieuLD', winner: '', score: '' }, // A
+  { date: '17/11/2025', time: '12:15', player1: 'HoanPV', player2: 'DuyHG', winner: '', score: '' },   // B
+  { date: '18/11/2025', time: '12:15', player1: 'KhanhLQ', player2: 'HuyHVQ', winner: '', score: '' }, // C
+  { date: '18/11/2025', time: '12:15', player1: 'ThaiNQ', player2: 'NhanVP', winner: '', score: '' },  // D
+  { date: '19/11/2025', time: '12:15', player1: 'ThuyNT', player2: 'NhanTT', winner: '', score: '' },  // A
+  { date: '19/11/2025', time: '12:15', player1: 'SangTT', player2: 'YChiTQ', winner: '', score: '' },  // B
+  { date: '20/11/2025', time: '12:15', player1: 'SinhNT', player2: 'HungLV', winner: '', score: '' },  // C
+  { date: '20/11/2025', time: '12:15', player1: 'DongLT', player2: 'Mizutani', winner: '', score: '' },// D
+  { date: '21/11/2025', time: '12:15', player1: 'ThangPV', player2: 'ThangNH', winner: '', score: '' },// A
+  { date: '21/11/2025', time: '12:15', player1: 'ThanhND', player2: 'HoanPV', winner: '', score: '' }, // B
 
-  // ===== Nhóm B =====
-  { date: '24/11/2025', time: '12:15', player1: 'HoanPV', player2: 'DuyHG', winner: '', score: '' },
-  { date: '24/11/2025', time: '12:15', player1: 'SangTT', player2: 'YChiTQ', winner: '', score: '' },
-  { date: '25/11/2025', time: '12:15', player1: 'ThanhND', player2: 'HoanPV', winner: '', score: '' },
-  { date: '25/11/2025', time: '12:15', player1: 'DuyHG', player2: 'SangTT', winner: '', score: '' },
-  { date: '26/11/2025', time: '12:15', player1: 'YChiTQ', player2: 'ThanhND', winner: '', score: '' },
-  { date: '26/11/2025', time: '12:15', player1: 'HoanPV', player2: 'SangTT', winner: '', score: '' },
-  { date: '27/11/2025', time: '12:15', player1: 'DuyHG', player2: 'YChiTQ', winner: '', score: '' },
-  { date: '27/11/2025', time: '12:15', player1: 'ThanhND', player2: 'SangTT', winner: '', score: '' },
-  { date: '28/11/2025', time: '12:15', player1: 'HoanPV', player2: 'YChiTQ', winner: '', score: '' },
-  { date: '28/11/2025', time: '12:15', player1: 'DuyHG', player2: 'ThanhND', winner: '', score: '' },
+  // Tuần 2
+  { date: '24/11/2025', time: '12:15', player1: 'QuynhTTN', player2: 'KhanhLQ', winner: '', score: '' }, // C
+  { date: '24/11/2025', time: '12:15', player1: 'YenNTN', player2: 'ThaiNQ', winner: '', score: '' },    // D
+  { date: '25/11/2025', time: '12:15', player1: 'LieuLD', player2: 'ThuyNT', winner: '', score: '' },    // A
+  { date: '25/11/2025', time: '12:15', player1: 'DuyHG', player2: 'SangTT', winner: '', score: '' },     // B
+  { date: '26/11/2025', time: '12:15', player1: 'HuyHVQ', player2: 'SinhNT', winner: '', score: '' },    // C
+  { date: '26/11/2025', time: '12:15', player1: 'NhanVP', player2: 'DongLT', winner: '', score: '' },    // D
+  { date: '27/11/2025', time: '12:15', player1: 'NhanTT', player2: 'ThangPV', winner: '', score: '' },   // A
+  { date: '27/11/2025', time: '12:15', player1: 'YChiTQ', player2: 'ThanhND', winner: '', score: '' },   // B
+  { date: '28/11/2025', time: '12:15', player1: 'HungLV', player2: 'QuynhTTN', winner: '', score: '' },  // C
+  { date: '28/11/2025', time: '12:15', player1: 'Mizutani', player2: 'YenNTN', winner: '', score: '' },  // D
 
-  // ===== Nhóm C =====
-  { date: '01/12/2025', time: '12:15', player1: 'KhanhLQ', player2: 'HuyHVQ', winner: '', score: '' },
-  { date: '01/12/2025', time: '12:15', player1: 'SinhNT', player2: 'HungLV', winner: '', score: '' },
-  { date: '02/12/2025', time: '12:15', player1: 'QuynhTTN', player2: 'KhanhLQ', winner: '', score: '' },
-  { date: '02/12/2025', time: '12:15', player1: 'HuyHVQ', player2: 'SinhNT', winner: '', score: '' },
-  { date: '03/12/2025', time: '12:15', player1: 'HungLV', player2: 'QuynhTTN', winner: '', score: '' },
-  { date: '03/12/2025', time: '12:15', player1: 'KhanhLQ', player2: 'HungLV', winner: '', score: '' },
-  { date: '04/12/2025', time: '12:15', player1: 'HuyHVQ', player2: 'QuynhTTN', winner: '', score: '' },
-  { date: '04/12/2025', time: '12:15', player1: 'SinhNT', player2: 'KhanhLQ', winner: '', score: '' },
-  { date: '05/12/2025', time: '12:15', player1: 'HungLV', player2: 'HuyHVQ', winner: '', score: '' },
-  { date: '05/12/2025', time: '12:15', player1: 'QuynhTTN', player2: 'SinhNT', winner: '', score: '' },
+  // Tuần 3
+  { date: '01/12/2025', time: '12:15', player1: 'ThangNH', player2: 'ThuyNT', winner: '', score: '' },  // A
+  { date: '01/12/2025', time: '12:15', player1: 'HoanPV', player2: 'SangTT', winner: '', score: '' },   // B
+  { date: '02/12/2025', time: '12:15', player1: 'KhanhLQ', player2: 'HungLV', winner: '', score: '' },  // C
+  { date: '02/12/2025', time: '12:15', player1: 'ThaiNQ', player2: 'DongLT', winner: '', score: '' },   // D
+  { date: '03/12/2025', time: '12:15', player1: 'LieuLD', player2: 'ThangPV', winner: '', score: '' },  // A
+  { date: '03/12/2025', time: '12:15', player1: 'DuyHG', player2: 'YChiTQ', winner: '', score: '' },    // B
+  { date: '04/12/2025', time: '12:15', player1: 'HuyHVQ', player2: 'QuynhTTN', winner: '', score: '' }, // C
+  { date: '04/12/2025', time: '12:15', player1: 'NhanVP', player2: 'Mizutani', winner: '', score: '' }, // D
+  { date: '05/12/2025', time: '12:15', player1: 'NhanTT', player2: 'ThangNH', winner: '', score: '' },  // A
+  { date: '05/12/2025', time: '12:15', player1: 'ThanhND', player2: 'SangTT', winner: '', score: '' },  // B
 
-  // ===== Nhóm D =====
-  { date: '08/12/2025', time: '12:15', player1: 'ThaiNQ', player2: 'NhanVP', winner: '', score: '' },
-  { date: '08/12/2025', time: '12:15', player1: 'DongLT', player2: 'Mizutani', winner: '', score: '' },
-  { date: '09/12/2025', time: '12:15', player1: 'YenNTN', player2: 'ThaiNQ', winner: '', score: '' },
-  { date: '09/12/2025', time: '12:15', player1: 'NhanVP', player2: 'DongLT', winner: '', score: '' },
-  { date: '10/12/2025', time: '12:15', player1: 'Mizutani', player2: 'YenNTN', winner: '', score: '' },
-  { date: '10/12/2025', time: '12:15', player1: 'ThaiNQ', player2: 'DongLT', winner: '', score: '' },
-  { date: '11/12/2025', time: '12:15', player1: 'NhanVP', player2: 'Mizutani', winner: '', score: '' },
-  { date: '11/12/2025', time: '12:15', player1: 'YenNTN', player2: 'DongLT', winner: '', score: '' },
-  { date: '12/12/2025', time: '12:15', player1: 'ThaiNQ', player2: 'Mizutani', winner: '', score: '' },
-  { date: '12/12/2025', time: '12:15', player1: 'NhanVP', player2: 'YenNTN', winner: '', score: '' }
+  // Tuần 4
+  { date: '08/12/2025', time: '12:15', player1: 'SinhNT', player2: 'KhanhLQ', winner: '', score: '' },   // C
+  { date: '08/12/2025', time: '12:15', player1: 'YenNTN', player2: 'DongLT', winner: '', score: '' },    // D
+  { date: '09/12/2025', time: '12:15', player1: 'ThuyNT', player2: 'ThangPV', winner: '', score: '' },   // A
+  { date: '09/12/2025', time: '12:15', player1: 'HoanPV', player2: 'YChiTQ', winner: '', score: '' },    // B
+  { date: '10/12/2025', time: '12:15', player1: 'HungLV', player2: 'HuyHVQ', winner: '', score: '' },    // C
+  { date: '10/12/2025', time: '12:15', player1: 'ThaiNQ', player2: 'Mizutani', winner: '', score: '' },  // D
+  { date: '11/12/2025', time: '12:15', player1: 'LieuLD', player2: 'NhanTT', winner: '', score: '' },    // A
+  { date: '11/12/2025', time: '12:15', player1: 'DuyHG', player2: 'ThanhND', winner: '', score: '' },    // B
+  { date: '12/12/2025', time: '12:15', player1: 'QuynhTTN', player2: 'SinhNT', winner: '', score: '' },  // C
+  { date: '12/12/2025', time: '12:15', player1: 'NhanVP', player2: 'YenNTN', winner: '', score: '' }     // D
 ];
 
 // Dữ liệu mẫu cho playoffMatches (thay thế bằng dữ liệu thực tế của bạn)
