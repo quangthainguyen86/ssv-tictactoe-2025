@@ -15,27 +15,27 @@ const roundRobinMatches = [
   { date: '19/11/2025', time: '12:15', player1: 'ThuyNT', player2: 'NhanTT', winner: '', score: '' },  // A
   { date: '19/11/2025', time: '12:15', player1: 'SangTT', player2: 'YChiTQ', winner: '', score: '' },  // B
   { date: '20/11/2025', time: '12:15', player1: 'SinhNT', player2: 'HungLV', winner: '', score: '' },  // C
-  { date: '20/11/2025', time: '12:15', player1: 'DongLT', player2: 'Mizutani', winner: '', score: '' },// D
+  { date: '20/11/2025', time: '12:15', player1: 'ThaiNQ', player2: 'DongLT', winner: '', score: '' },  // D
   { date: '21/11/2025', time: '12:15', player1: 'ThangPV', player2: 'ThangNH', winner: '', score: '' },// A
   { date: '21/11/2025', time: '12:15', player1: 'ThanhND', player2: 'HoanPV', winner: '', score: '' }, // B
 
   // Tuần 2
   { date: '24/11/2025', time: '12:15', player1: 'QuynhTTN', player2: 'KhanhLQ', winner: '', score: '' }, // C
-  { date: '24/11/2025', time: '12:15', player1: 'YenNTN', player2: 'ThaiNQ', winner: '', score: '' },    // D
+  { date: '24/11/2025', time: '12:15', player1: 'ThaiNQ', player2: 'YenNTN', winner: '', score: '' },    // D
   { date: '25/11/2025', time: '12:15', player1: 'LieuND', player2: 'ThuyNT', winner: '', score: '' },    // A
   { date: '25/11/2025', time: '12:15', player1: 'DuyHG', player2: 'SangTT', winner: '', score: '' },     // B
   { date: '26/11/2025', time: '12:15', player1: 'HuyHVQ', player2: 'SinhNT', winner: '', score: '' },    // C
-  { date: '26/11/2025', time: '12:15', player1: 'NhanVP', player2: 'DongLT', winner: '', score: '' },    // D
+  { date: '26/11/2025', time: '12:15', player1: 'ThaiNQ', player2: 'Mizutani', winner: '', score: '' },  // D
   { date: '27/11/2025', time: '12:15', player1: 'NhanTT', player2: 'ThangPV', winner: '', score: '' },   // A
   { date: '27/11/2025', time: '12:15', player1: 'YChiTQ', player2: 'ThanhND', winner: '', score: '' },   // B
   { date: '28/11/2025', time: '12:15', player1: 'HungLV', player2: 'QuynhTTN', winner: '', score: '' },  // C
-  { date: '28/11/2025', time: '12:15', player1: 'Mizutani', player2: 'YenNTN', winner: '', score: '' },  // D
+  { date: '28/11/2025', time: '12:15', player1: 'NhanVP', player2: 'DongLT', winner: '', score: '' },    // D
 
   // Tuần 3
   { date: '01/12/2025', time: '12:15', player1: 'ThangNH', player2: 'ThuyNT', winner: '', score: '' },  // A
   { date: '01/12/2025', time: '12:15', player1: 'HoanPV', player2: 'SangTT', winner: '', score: '' },   // B
   { date: '02/12/2025', time: '12:15', player1: 'KhanhLQ', player2: 'HungLV', winner: '', score: '' },  // C
-  { date: '02/12/2025', time: '12:15', player1: 'ThaiNQ', player2: 'DongLT', winner: '', score: '' },   // D
+  { date: '02/12/2025', time: '12:15', player1: 'NhanVP', player2: 'YenNTN', winner: '', score: '' },   // D
   { date: '03/12/2025', time: '12:15', player1: 'LieuND', player2: 'ThangPV', winner: '', score: '' },  // A
   { date: '03/12/2025', time: '12:15', player1: 'DuyHG', player2: 'YChiTQ', winner: '', score: '' },    // B
   { date: '04/12/2025', time: '12:15', player1: 'HuyHVQ', player2: 'QuynhTTN', winner: '', score: '' }, // C
@@ -45,18 +45,17 @@ const roundRobinMatches = [
 
   // Tuần 4
   { date: '08/12/2025', time: '12:15', player1: 'SinhNT', player2: 'KhanhLQ', winner: '', score: '' },   // C
-  { date: '08/12/2025', time: '12:15', player1: 'YenNTN', player2: 'DongLT', winner: '', score: '' },    // D
+  { date: '08/12/2025', time: '12:15', player1: 'DongLT', player2: 'YenNTN', winner: '', score: '' },    // D
   { date: '09/12/2025', time: '12:15', player1: 'ThuyNT', player2: 'ThangPV', winner: '', score: '' },   // A
   { date: '09/12/2025', time: '12:15', player1: 'HoanPV', player2: 'YChiTQ', winner: '', score: '' },    // B
   { date: '10/12/2025', time: '12:15', player1: 'HungLV', player2: 'HuyHVQ', winner: '', score: '' },    // C
-  { date: '10/12/2025', time: '12:15', player1: 'ThaiNQ', player2: 'Mizutani', winner: '', score: '' },  // D
+  { date: '10/12/2025', time: '12:15', player1: 'DongLT', player2: 'Mizutani', winner: '', score: '' },  // D
   { date: '11/12/2025', time: '12:15', player1: 'LieuND', player2: 'NhanTT', winner: '', score: '' },    // A
   { date: '11/12/2025', time: '12:15', player1: 'DuyHG', player2: 'ThanhND', winner: '', score: '' },    // B
   { date: '12/12/2025', time: '12:15', player1: 'QuynhTTN', player2: 'SinhNT', winner: '', score: '' },  // C
-  { date: '12/12/2025', time: '12:15', player1: 'NhanVP', player2: 'YenNTN', winner: '', score: '' }     // D
+  { date: '12/12/2025', time: '12:15', player1: 'YenNTN', player2: 'Mizutani', winner: '', score: '' }   // D
 ];
 
-// Dữ liệu mẫu cho playoffMatches (thay thế bằng dữ liệu thực tế của bạn)
 const playoffMatches = [
     { stage: 'Tứ kết', date: '15/12/2025', time: '12:15', player1: '', player2: '', winner: '', score: '' },
     { stage: 'Tứ kết', date: '15/12/2025', time: '12:15', player1: '', player2: '', winner: '', score: '' },
@@ -66,6 +65,10 @@ const playoffMatches = [
     { stage: 'Bán kết', date: '22/12/2025', time: '12:15', player1: '', player2: '', winner: '', score: '' },
     { stage: 'Tranh 3, 4', date: '23/12/2025', time: '12:15', player1: '', player2: '', winner: '', score: '' },
     { stage: 'Chung Kết', date: '23/12/2025', time: '12:15', player1: '', player2: '', winner: '', score: '' }
+];
+
+const win6plusStats = [
+  { player: "ThaiNQ", wins: 0 },
 ];
 
 // Shared functions
@@ -101,114 +104,77 @@ const maxRuns = 5;
 let isCaught = false;
 let originalStyle = null;
 
-function initgamepadIcon() {
-    const icon = document.getElementById('gamepadIcon');
-    if (!icon) return;
+function initGamepadPlayButton() {
+    const btn = document.getElementById('gamepadPlayButton');
+    if (!btn) return;
 
-    // Lưu style gốc (chỉ lần đầu)
-    if (!originalStyle) {
-        originalStyle = {
-            left: icon.style.left,
-            top: icon.style.top,
-            right: icon.style.right || '20px',
-            bottom: icon.style.bottom || '20px',
-            transform: icon.style.transform || 'scale(1)',
-            boxShadow: icon.style.boxShadow || '',
-            animation: icon.style.animation || '',
-            background: icon.style.background || '#fff',
-            color: icon.style.color || '#3b82f6',
-            border: icon.style.border || '2px solid #3b82f6'
-        };
-    }
+    // === BUTTON HÌNH TRÒN HOÀN CHỈNH ===
+    btn.style.cssText = `
+        position: fixed;
+        right: 24px;
+        bottom: 24px;
+        width: 72px;
+        height: 72px;
+        background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+        color: white;
+        border: 3px solid #60a5fa;
+        border-radius: 50%;
+        box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4), 0 2px 8px rgba(0,0,0,0.1);
+        cursor: pointer;
+        z-index: 9999;
+        transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: system-ui, -apple-system, sans-serif;
+        user-select: none;
+        padding: 4px;
+    `;
 
-    // Reset về trạng thái ban đầu
-    function resetIcon() {
-        runCount = 0;
-        isCaught = false;
-        icon.style.transition = 'all 0.4s ease';
-        icon.style.left = originalStyle.left;
-        icon.style.top = originalStyle.top;
-        icon.style.right = originalStyle.right;
-        icon.style.bottom = originalStyle.bottom;
-        icon.style.transform = originalStyle.transform;
-        icon.style.boxShadow = originalStyle.boxShadow;
-        icon.style.animation = originalStyle.animation;
-        icon.style.background = originalStyle.background;
-        icon.style.color = originalStyle.color;
-        icon.style.border = originalStyle.border;
-    }
+    // === ICON GAMEPAD ===
+    const icon = btn.querySelector('i');
+    icon.style.cssText = `
+        font-size: 1.65rem;
+        margin-bottom: 0px;
+        line-height: 1;
+    `;
 
-    function runAway() {
-        if (isCaught || runCount >= maxRuns) return;
+    // === CHỮ PLAY NHỎ HƠN, FIT HOÀN HẢO ===
+    const playText = btn.querySelector('.play-text');
+    playText.style.cssText = `
+        font-size: 0.65rem;
+        font-weight: 800;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        margin-top: -2px;
+        line-height: 1;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    `;
 
-        runCount++;
-        console.log(`Chạy lần ${runCount}/5`);
-
-        const maxX = window.innerWidth - 60;
-        const maxY = window.innerHeight - 60;
-        const newX = 20 + Math.random() * (maxX - 40);
-        const newY = 20 + Math.random() * (maxY - 40);
-
-        icon.style.left = `${newX}px`;
-        icon.style.top = `${newY}px`;
-        icon.style.bottom = 'auto';
-        icon.style.right = 'auto';
-
-        // LẦN 5: DỪNG TẠI CHỖ
-        if (runCount >= maxRuns) {
-            setTimeout(() => {
-                isCaught = true;
-                icon.style.transform = 'scale(1.4)';
-                icon.style.boxShadow = '0 0 0 6px rgba(59, 130, 246, 0.4), 0 8px 25px rgba(0,0,0,0.2)';
-                icon.style.animation = 'pulse 1.5s infinite';
-
-                const style = document.createElement('style');
-                style.id = 'troll-pulse-style';
-                style.textContent = `
-                    @keyframes pulse {
-                        0%, 100% { box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.4), 0 8px 25px rgba(0,0,0,0.2); }
-                        50% { box-shadow: 0 0 0 12px rgba(59, 130, 246, 0.2), 0 10px 30px rgba(0,0,0,0.25); }
-                    }
-                `;
-                document.head.appendChild(style);
-            }, 400);
-        }
-    }
-
-    // Hover → chạy trốn
-    icon.addEventListener('mouseenter', runAway);
-
-    // Click → mở link + reset sau 1 giây
-    icon.addEventListener('click', () => {
-        if (isCaught) {
-            window.open('https://thichthivar.ssvhue.work', '_blank');
-
-            // Reset sau khi mở link
-            setTimeout(() => {
-                // Xóa animation pulse
-                const pulseStyle = document.getElementById('troll-pulse-style');
-                if (pulseStyle) pulseStyle.remove();
-
-                resetIcon();
-            }, 1000);
-        } else {
-            // Chưa bắt được → xoay nhẹ
-            icon.style.transform = 'rotate(20deg) scale(0.9)';
-            setTimeout(() => icon.style.transform = '', 300);
-        }
+    // === HOVER EFFECT ===
+    btn.addEventListener('mouseenter', () => {
+        btn.style.transform = 'scale(1.08)';
+        btn.style.boxShadow = '0 12px 35px rgba(59, 130, 246, 0.5), 0 4px 15px rgba(0,0,0,0.15)';
     });
 
-    // CSS cơ bản
-    icon.style.position = 'fixed';
-    icon.style.zIndex = '9999';
-    icon.style.cursor = 'pointer';
-    icon.style.transition = 'all 0.35s ease';
+    btn.addEventListener('mouseleave', () => {
+        btn.style.transform = 'scale(1)';
+        btn.style.boxShadow = '0 8px 25px rgba(59, 130, 246, 0.4), 0 2px 8px rgba(0,0,0,0.1)';
+    });
+
+    // === CLICK EFFECT ===
+    btn.addEventListener('click', () => {
+        window.open('https://thichthivar.ssvhue.work', '_blank');
+        
+        btn.style.transform = 'scale(0.95)';
+        setTimeout(() => btn.style.transform = 'scale(1.08)', 120);
+        setTimeout(() => btn.style.transform = 'scale(1)', 300);
+    });
 }
 
-document.addEventListener("DOMContentLoaded", initgamepadIcon);
-// Khi DOM đã load
+document.addEventListener('DOMContentLoaded', initGamepadPlayButton);
 document.addEventListener("DOMContentLoaded", function () {
-  // Mở popup khi click nút
   document
     .getElementById("group-popup-btn")
     .addEventListener("click", function () {
@@ -216,7 +182,6 @@ document.addEventListener("DOMContentLoaded", function () {
       modal.show();
     });
 
-  // Tải danh sách nhóm vào popup (giữ nguyên logic cũ nếu có trong script.js)
   loadGroups();
 });
 
@@ -242,15 +207,6 @@ function populateDateFilter() {
   todayOption.value = "today";
   todayOption.textContent = "Hôm nay";
   dateFilter.appendChild(todayOption);
-
-  // dates.forEach(date => {
-  //     const option = document.createElement('option');
-  //     option.value = date;
-  //     option.textContent = date;
-  //     dateFilter.appendChild(option);
-  // });
-
-  // dateFilter.value = 'today';
 }
 
 let roundRobinTable, playoffTable;
@@ -411,75 +367,153 @@ function initializeRankings() {
 }
 
 function calculateRankings() {
-  const rankings = initializeRankings();
+    const rankings = initializeRankings();
 
-  Object.keys(groups).forEach((group) => {
-    roundRobinMatches.forEach((match) => {
-      const p1Name = match.player1;
-      const p2Name = match.player2;
+    // === BƯỚC 1: TÍNH TOÁN THỐNG KÊ CHO TỪNG NHÓM ===
+    Object.keys(groups).forEach((group) => {
+        const groupPlayers = groups[group];
 
-      if (!groups[group].includes(p1Name) || !groups[group].includes(p2Name))
-        return;
+        roundRobinMatches.forEach((match) => {
+            const p1Name = match.player1;
+            const p2Name = match.player2;
 
-      const p1 = rankings[group].find((p) => p.player === p1Name);
-      const p2 = rankings[group].find((p) => p.player === p2Name);
-      if (!p1 || !p2) return;
+            if (!groupPlayers.includes(p1Name) || !groupPlayers.includes(p2Name)) return;
 
-      const winner = match.winner?.trim();
-      const score = match.score?.trim();
+            const p1 = rankings[group].find(p => p.player === p1Name);
+            const p2 = rankings[group].find(p => p.player === p2Name);
+            if (!p1 || !p2) return;
 
-      // === 1. Chưa thi đấu: winner = '' → bỏ qua ===
-      if (!winner || winner === "") return;
+            const winner = match.winner?.trim();
+            const scoreStr = match.score?.trim();
 
-      // === 2. Đã thi đấu → tính trận + điểm ===
-      p1.matches++;
-      p2.matches++;
+            // Bỏ qua trận chưa đấu
+            if (!winner || winner === "") return;
 
-      let p1Score = 0,
-        p2Score = 0;
-      if (score && score.includes("-")) {
-        const [s1, s2] = score.split("-").map(Number);
-        p1Score = isNaN(s1) ? 0 : s1;
-        p2Score = isNaN(s2) ? 0 : s2;
-      }
+            p1.matches++;
+            p2.matches++;
 
-      // === Xử lý kết quả theo winner ===
-      if (winner === "H") {
-        p1.draws++;
-        p2.draws++;
-        p1.points += 1;
-        p2.points += 1;
-      } else if (winner === p1Name) {
-        p1.wins++;
-        p2.losses++;
-        p1.points += 3;
-      } else if (winner === p2Name) {
-        p2.wins++;
-        p1.losses++;
-        p2.points += 3;
-      }
+            // === XỬ LÝ TỈ SỐ: DỰA VÀO WINNER, KHÔNG TIN SCORE ===
+            let p1Score = 0, p2Score = 0;
 
-      // === Cập nhật tỉ số (dù hòa hay thắng) ===
-      p1.goalsFor += p1Score;
-      p1.goalsAgainst += p2Score;
-      p2.goalsFor += p2Score;
-      p2.goalsAgainst += p1Score;
+            if (scoreStr && scoreStr.includes("-")) {
+                const [s1, s2] = scoreStr.split("-").map(Number);
+                const scoreValid = !isNaN(s1) && !isNaN(s2);
 
-      // Tính hệ số phụ
-      p1.goalDiff = p1.goalsFor - p1.goalsAgainst;
-      p2.goalDiff = p2.goalsFor - p2.goalsAgainst;
+                if (scoreValid) {
+                    // Kiểm tra tính hợp lệ: winner phải khớp với tỉ số
+                    const scoreWinner = s1 > s2 ? p1Name : s1 < s2 ? p2Name : "H";
+                    if (scoreWinner === winner) {
+                        // Score đúng → dùng
+                        p1Score = s1;
+                        p2Score = s2;
+                    } else {
+                        // Score ngược → đảo ngược
+                        p1Score = s2;
+                        p2Score = s1;
+                    }
+                }
+            }
+
+            // Nếu score không hợp lệ → dùng winner để suy ra tỉ số mặc định
+            if (p1Score === 0 && p2Score === 0) {
+                if (winner === "H") {
+                    p1Score = p2Score = 1; // hòa 1-1
+                } else if (winner === p1Name) {
+                    p1Score = 2; p2Score = 1; // thắng 2-1
+                } else if (winner === p2Name) {
+                    p1Score = 1; p2Score = 2; // thua 1-2
+                }
+            }
+
+            // === CẬP NHẬT TỈ SỐ ===
+            p1.goalsFor += p1Score;
+            p1.goalsAgainst += p2Score;
+            p2.goalsFor += p2Score;
+            p2.goalsAgainst += p1Score;
+
+            // === CẬP NHẬT KẾT QUẢ ===
+            if (winner === "H") {
+                p1.draws++;
+                p2.draws++;
+                p1.points += 1;
+                p2.points += 1;
+            } else if (winner === p1Name) {
+                p1.wins++;
+                p2.losses++;
+                p1.points += 3;
+            } else if (winner === p2Name) {
+                p2.wins++;
+                p1.losses++;
+                p2.points += 3;
+            }
+        });
+
+        // Cập nhật hệ số
+        rankings[group].forEach(p => {
+            p.goalDiff = p.goalsFor - p.goalsAgainst;
+        });
     });
 
-    // === Sắp xếp: Điểm → Thắng → Hệ số phụ → Bàn thắng ===
-    rankings[group].sort((a, b) => {
-      if (b.points !== a.points) return b.points - a.points;
-      if (b.wins !== a.wins) return b.wins - a.wins;
-      if (b.goalDiff !== a.goalDiff) return b.goalDiff - a.goalDiff;
-      return b.goalsFor - a.goalsFor;
-    });
-  });
+    // === BƯỚC 2: SẮP XẾP THEO 4 ƯU TIÊN ===
+    Object.keys(rankings).forEach(group => {
+        const players = rankings[group];
 
-  return rankings;
+        // Tạo map đối đầu
+        const headToHead = {};
+        roundRobinMatches.forEach(match => {
+            const p1 = match.player1, p2 = match.player2;
+            const winner = match.winner?.trim();
+            if (!winner || winner === "") return;
+
+            const key1 = `${p1} vs ${p2}`;
+            const key2 = `${p2} vs ${p1}`;
+
+            let result1, result2;
+            if (winner === "H") {
+                result1 = result2 = 0;
+            } else if (winner === p1) {
+                result1 = 1; result2 = -1;
+            } else if (winner === p2) {
+                result1 = -1; result2 = 1;
+            }
+
+            headToHead[key1] = result1;
+            headToHead[key2] = result2;
+        });
+
+        function compareHeadToHead(a, b) {
+            const key = `${a.player} vs ${b.player}`;
+            const result = headToHead[key];
+            if (result !== undefined) return -result;
+            return 0;
+        }
+
+        // Sắp xếp theo 4 tiêu chí
+        players.sort((a, b) => {
+            if (b.points !== a.points) return b.points - a.points;
+            if (b.goalDiff !== a.goalDiff) return b.goalDiff - a.goalDiff;
+            const h2h = compareHeadToHead(a, b);
+            if (h2h !== 0) return h2h;
+            return b.wins - a.wins;
+        });
+
+        // Gán hạng
+        let currentRank = 0;
+        let prev = null;
+        players.forEach((p, i) => {
+            if (!prev ||
+                prev.points !== p.points ||
+                prev.goalDiff !== p.goalDiff ||
+                compareHeadToHead(prev, p) !== 0 ||
+                prev.wins !== p.wins) {
+                currentRank = i + 1;
+            }
+            p.rank = currentRank;
+            prev = p;
+        });
+    });
+
+    return rankings;
 }
 
 function calculatePlayoffRankings() {
@@ -740,6 +774,62 @@ function loadGroups() {
     groupList.innerHTML += card;
   });
 }
+
+// === HIỂN THỊ BẢNG WIN 6+1 – CHỈ NGƯỜI CÓ WINS > 0 ===
+// === HIỂN THỊ BẢNG WIN 6+ – CHỈ NGƯỜI CÓ WINS > 0, CÓ ICON ===
+function renderWin6PlusTable() {
+    // Lọc người có wins > 0 và sắp xếp
+    const winners = win6plusStats
+        .filter(p => p.wins > 0)
+        .sort((a, b) => b.wins - a.wins);
+
+    // Xếp hạng chính xác (cùng wins → cùng hạng)
+    let currentRank = 0;
+    let prevWins = null;
+    const ranked = winners.map((item, index) => {
+        if (item.wins !== prevWins) {
+            currentRank = index + 1;
+            prevWins = item.wins;
+        }
+        return { ...item, rank: currentRank };
+    });
+
+    const tbody = $('#win6plusTable tbody');
+    tbody.empty();
+
+    if (winners.length === 0) {
+        tbody.append(`
+            <tr>
+                <td colspan="3" style="text-align:center; color:#888; padding:20px; font-style:italic;">
+                    Chưa có người đạt win 6+
+                </td>
+            </tr>
+        `);
+    } else {
+        ranked.forEach(item => {
+            const medalIcon = item.rank === 1 ? '<i class="fas fa-medal text-warning"></i>' :
+                             item.rank === 2 ? '<i class="fas fa-medal text-secondary"></i>' :
+                             item.rank === 3 ? '<i class="fas fa-medal" style="color:#cd7f32;"></i>' : '';
+
+            tbody.append(`
+                <tr>
+                    <td>
+                        <strong>#${item.rank}</strong> ${medalIcon}
+                    </td>
+                    <td>
+                        <i class="fas fa-user text-primary"></i> <strong>${item.player}</strong>
+                    </td>
+                    <td>
+                        <i class="fas fa-flag-checkered text-success"></i> 
+                        <span class="win-count">${item.wins}</span>
+                    </td>
+                </tr>
+            `);
+        });
+    }
+}
+
+renderWin6PlusTable();
 
 // Initialize based on page
 $(document).ready(() => {
