@@ -636,6 +636,31 @@
                 flex-wrap: wrap;
             }
         }
+
+        /* Nút mở popup nhóm */
+        #group-popup-btn {
+            padding: 8px 16px;
+            font-size: 0.95rem;
+            white-space: nowrap;
+        }
+
+        #group-popup-btn i {
+            font-size: 1.1rem;
+        }
+
+        /* Responsive cho nút */
+        @media (max-width: 768px) {
+            .filter-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            #group-popup-btn {
+                width: 100%;
+                max-width: 280px;
+                margin: 10px auto 0;
+            }
+        }
     </style>
 </head>
 
@@ -668,12 +693,6 @@
     <div class="container">
         <h1>Lịch Thi Đấu</h1>
 
-        <!-- Group Section -->
-        <div class="group-section">
-            <h2>Nhóm</h2>
-            <div class="row" id="group-list"></div>
-        </div>
-
         <!-- Filter Section -->
         <div class="filter-section">
             <select id="date-filter">
@@ -686,6 +705,30 @@
                 <option value="C">Nhóm C</option>
                 <option value="D">Nhóm D</option>
             </select>
+            <button id="group-popup-btn" class="btn btn-outline-primary d-flex align-items-center gap-2">
+                <i class="fas fa-users"></i> Xem nhóm
+            </button>
+        </div>
+
+        <!-- Modal Popup Nhóm -->
+        <div class="modal fade" id="groupModal" tabindex="-1" aria-labelledby="groupModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header" style="background: var(--primary-color); color: white;">
+                        <h5 class="modal-title" id="groupModalLabel">
+                            <i class="fas fa-users"></i> Bảng Phân Nhóm - SSV Tic-Tac-Toe Championship 2025
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row" id="group-list"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- Round Robin Table -->
@@ -746,9 +789,10 @@
         </div>
     </div>
 
-    <!-- Gift Icon -->
-    <div class="gamepad-icon" id="gamepadIcon">
+    <!-- Gamepad Icon -->
+    <div class="gamepad-play-button" id="gamepadPlayButton" title="Chơi ngay!">
         <i class="fas fa-gamepad"></i>
+        <span class="play-text">PLAY</span>
     </div>
 
     <!-- jQuery -->

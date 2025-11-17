@@ -341,7 +341,7 @@
 
         <!-- Playoff Rankings -->
         <div id="playoff-rankings">
-            <h2>Bảng xếp hạng vòng Playoff</h2>
+            <h2>Vòng Playoff</h2>
             <div class="table-container">
                 <table class="table table-bordered table-hover" id="playoff-rankings-table">
                     <thead>
@@ -355,11 +355,29 @@
                 </table>
             </div>
         </div>
+
+        <!-- Win6+ Rankings -->
+        <div class="stats-section">
+            <h2 class="section-title">Win 6+</h2>
+            <div class="table-container">
+                <table class="table table-bordered table-hover rankings-table" id="win6plusTable">
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-medal"></i> Thứ hạng</th>
+                            <th><i class="fas fa-user"></i> Người chơi</th>
+                            <th><i class="fas fa-flag-checkered"></i> Số lần win6+</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
     </div>
 
     <!-- Gamepad Icon -->
-    <div class="gamepad-icon" id="gamepadIcon">
+    <div class="gamepad-play-button" id="gamepadPlayButton" title="Chơi ngay!">
         <i class="fas fa-gamepad"></i>
+        <span class="play-text">PLAY</span>
     </div>
 
     <!-- jQuery -->
