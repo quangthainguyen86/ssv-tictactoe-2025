@@ -10,8 +10,8 @@ const roundRobinMatches = [
   // Tuần 1
   { date: '17/11/2025', time: '12:15', player1: 'ThangNH', player2: 'LieuND', winner: '', score: '' }, // A
   { date: '17/11/2025', time: '12:15', player1: 'HoanPV', player2: 'DuyHG', winner: '', score: '' },   // B
-  { date: '18/11/2025', time: '12:15', player1: 'KhanhLQ', player2: 'HuyHVQ', winner: '', score: '' }, // C
-  { date: '18/11/2025', time: '12:15', player1: 'ThaiNQ', player2: 'NhanVP', winner: '', score: '' },  // D
+  { date: '18/11/2025', time: '12:15', player1: 'KhanhLQ', player2: 'HuyHVQ', winner: 'KhanhLQ', score: '2-1' }, // C
+  { date: '18/11/2025', time: '12:15', player1: 'ThaiNQ', player2: 'NhanVP', winner: 'NhanVP', score: '1-2' },  // D
   { date: '19/11/2025', time: '12:15', player1: 'ThuyNT', player2: 'NhanTT', winner: '', score: '' },  // A
   { date: '19/11/2025', time: '12:15', player1: 'SangTT', player2: 'YChiTQ', winner: '', score: '' },  // B
   { date: '20/11/2025', time: '12:15', player1: 'SinhNT', player2: 'HungLV', winner: '', score: '' },  // C
