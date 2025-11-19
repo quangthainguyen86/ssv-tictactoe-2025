@@ -21,21 +21,21 @@ const roundRobinMatches = [
 
   // Tuần 2
   { date: '24/11/2025', time: '12:15', player1: 'QuynhTTN', player2: 'KhanhLQ', winner: '', score: '' }, // C
-  { date: '24/11/2025', time: '12:15', player1: 'ThaiNQ', player2: 'YenNTN', winner: '', score: '' },    // D
+  { date: '24/11/2025', time: '12:15', player1: 'NhanVP', player2: 'YenNTN', winner: '', score: '' },    // D
   { date: '25/11/2025', time: '12:15', player1: 'LieuND', player2: 'ThuyNT', winner: '', score: '' },    // A
   { date: '25/11/2025', time: '12:15', player1: 'DuyHG', player2: 'SangTT', winner: '', score: '' },     // B
   { date: '26/11/2025', time: '12:15', player1: 'HuyHVQ', player2: 'SinhNT', winner: '', score: '' },    // C
-  { date: '26/11/2025', time: '12:15', player1: 'ThaiNQ', player2: 'Mizutani', winner: '', score: '' },  // D
+  { date: '26/11/2025', time: '12:15', player1: 'NhanVP', player2: 'DongLT', winner: '', score: '' },    // D
   { date: '27/11/2025', time: '12:15', player1: 'NhanTT', player2: 'ThangPV', winner: '', score: '' },   // A
   { date: '27/11/2025', time: '12:15', player1: 'YChiTQ', player2: 'ThanhND', winner: '', score: '' },   // B
   { date: '28/11/2025', time: '12:15', player1: 'HungLV', player2: 'QuynhTTN', winner: '', score: '' },  // C
-  { date: '28/11/2025', time: '12:15', player1: 'NhanVP', player2: 'DongLT', winner: '', score: '' },    // D
+  { date: '28/11/2025', time: '12:15', player1: 'ThaiNQ', player2: 'YenNTN', winner: '', score: '' },    // D
 
   // Tuần 3
   { date: '01/12/2025', time: '12:15', player1: 'ThangNH', player2: 'ThuyNT', winner: '', score: '' },  // A
   { date: '01/12/2025', time: '12:15', player1: 'HoanPV', player2: 'SangTT', winner: '', score: '' },   // B
   { date: '02/12/2025', time: '12:15', player1: 'KhanhLQ', player2: 'HungLV', winner: '', score: '' },  // C
-  { date: '02/12/2025', time: '12:15', player1: 'NhanVP', player2: 'YenNTN', winner: '', score: '' },   // D
+  { date: '02/12/2025', time: '12:15', player1: 'ThaiNQ', player2: 'Mizutani', winner: '', score: '' },  // D
   { date: '03/12/2025', time: '12:15', player1: 'LieuND', player2: 'ThangPV', winner: '', score: '' },  // A
   { date: '03/12/2025', time: '12:15', player1: 'DuyHG', player2: 'YChiTQ', winner: '', score: '' },    // B
   { date: '04/12/2025', time: '12:15', player1: 'HuyHVQ', player2: 'QuynhTTN', winner: '', score: '' }, // C
