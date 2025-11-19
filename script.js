@@ -15,8 +15,8 @@ const roundRobinMatches = [
   { date: '19/11/2025', time: '12:15', player1: 'ThuyNT', player2: 'NhanTT', winner: 'NhanTT', score: '1-2' },  // A
   { date: '19/11/2025', time: '12:15', player1: 'SangTT', player2: 'YChiTQ', winner: 'YChiTQ', score: '0-2' },  // B
   { date: '20/11/2025', time: '12:15', player1: 'SinhNT', player2: 'HungLV', winner: 'HungLV', score: '0-2' },  // C
-  { date: '20/11/2025', time: '12:15', player1: 'ThaiNQ', player2: 'DongLT', winner: '', score: '' },  // D
-  { date: '21/11/2025', time: '12:15', player1: 'ThangPV', player2: 'ThangNH', winner: '', score: '' },// A
+  { date: '20/11/2025', time: '12:15', player1: 'NhanVP', player2: 'DongLT', winner: '', score: '' },    // D
+  { date: '21/11/2025', time: '12:15', player1: 'NhanTT', player2: 'ThangPV', winner: '', score: '' },   // A
   { date: '21/11/2025', time: '12:15', player1: 'ThanhND', player2: 'HoanPV', winner: 'ThanhND', score: '2-0' }, // B
 
   // Tuần 2
@@ -25,8 +25,8 @@ const roundRobinMatches = [
   { date: '25/11/2025', time: '12:15', player1: 'LieuND', player2: 'ThuyNT', winner: '', score: '' },    // A
   { date: '25/11/2025', time: '12:15', player1: 'DuyHG', player2: 'SangTT', winner: '', score: '' },     // B
   { date: '26/11/2025', time: '12:15', player1: 'HuyHVQ', player2: 'SinhNT', winner: '', score: '' },    // C
-  { date: '26/11/2025', time: '12:15', player1: 'NhanVP', player2: 'DongLT', winner: '', score: '' },    // D
-  { date: '27/11/2025', time: '12:15', player1: 'NhanTT', player2: 'ThangPV', winner: '', score: '' },   // A
+  { date: '26/11/2025', time: '12:15', player1: 'ThaiNQ', player2: 'DongLT', winner: '', score: '' },  // D
+  { date: '27/11/2025', time: '12:15', player1: 'ThangPV', player2: 'ThangNH', winner: '', score: '' },// A
   { date: '27/11/2025', time: '12:15', player1: 'YChiTQ', player2: 'ThanhND', winner: '', score: '' },   // B
   { date: '28/11/2025', time: '12:15', player1: 'HungLV', player2: 'QuynhTTN', winner: '', score: '' },  // C
   { date: '28/11/2025', time: '12:15', player1: 'ThaiNQ', player2: 'YenNTN', winner: '', score: '' },    // D
@@ -223,7 +223,7 @@ function renderRoundRobin(matches) {
                 <td>${match.time || "-"}</td>
                 <td>${match.player1 || "-"}</td>
                 <td>${match.player2 || "-"}</td>
-                <td>${match.winner || "-"}</td>
+                <td style="color: ${match.winner ? 'green' : 'inherit'};">${match.winner || "-"}</td>
                 <td>${match.score || "-"}</td>
             </tr>`;
     tbody.innerHTML += row;
